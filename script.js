@@ -12,7 +12,19 @@ for (let contador = 0; contador < listKey.length; contador++) {
   const instrument = key.classList[1];
   const idAudio = `#som_${instrument}`;
 
-  listKey[contador].onclick = () => {
+  key.onclick = () => {
     tocaSom(idAudio)
   };
+
+  key.onkeydown = (e) => {
+    console.log(e)
+    if (e.key === 'Enter' && 'Space') {
+      key.classList.add('ativa')
+    }
+
+  }
+
+  key.onkeyup = () => {
+    key.classList.remove('ativa')
+  }
 }
