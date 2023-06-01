@@ -18,7 +18,7 @@ for (let contador = 0; contador < listKey.length; contador++) {
 
   key.onkeydown = (e) => {
     console.log(e)
-    if (e.key === 'Enter' && 'Space') {
+    if (e.key === 'Enter' || e.key === 'Space') {
       key.classList.add('ativa')
     }
 
